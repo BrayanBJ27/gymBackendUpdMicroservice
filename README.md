@@ -83,6 +83,7 @@ const db = mysql.createConnection({
     password: 'Uyt:tBHLgt4Kk_E',
     database: 'programaciondis_gym'
 });
+
 ```
 
 ```sh
