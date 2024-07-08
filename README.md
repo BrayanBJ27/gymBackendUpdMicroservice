@@ -1,4 +1,4 @@
-# GYM Machine Reservation Update Service
+# Updating Existing GYM Machine Reserves Service
 
 This is the microservice for updating the GYM FITNESS BODY machine reservations.
 
