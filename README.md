@@ -18,7 +18,7 @@ This is the microservice for updating the GYM FITNESS BODY machine reservations.
    - [Evidence](#evidence-create)
 3. [Usage](#usage)
    - [Verify Server Functionality](#verify-server-functionality)
-   - [Add a New Product](#add-a-new-product)
+   - [Update a reservation](#update-a-reservation)
 4. [Program Execution](#program-execution)
    - [Create Docker Image](#create-docker-image)
 5. [DockerHub](#dockerhub)
@@ -88,4 +88,51 @@ const db = mysql.createConnection({
 
 ```sh
 npm run start
+```
+
+### Evidence
+![Imagen de WhatsApp 2024-07-07 a las 23 14 16_ff2664ac](https://github.com/BrayanBJ27/gymBackendUpdMicroservice/assets/87538474/63291715-c915-4f53-b13c-b56129faf15c)
+
+## Usage
+
+### Verify Server Functionality
+
+Method: GET  
+URL: `http://localhost:8090/`  
+Description: This route displays a message to verify that the server is running.
+![Captura de pantalla 2024-07-03 214528](https://github.com/BrayanBJ27/gymBackendUpdMicroservice/assets/87538474/369a4a65-fb86-482b-80ad-0f67e10e5aba)
+
+### Update a reservation
+
+Method: PUT  
+URL: `http://localhost:8090/reservations`  
+Description: This route allows you to update an existing reservation.
+Example request body (JSON):
+
+```json
+{
+    "machineName": "Treadmill",
+    "userName": "Juliana",
+    "startTime": "2024-07-05 11:00:00",
+    "endTime": "2024-07-05 12:00:00"
+}
+```
+![image](https://github.com/BrayanBJ27/gymBackendUpdMicroservice/assets/87538474/ba2adb3c-32ac-41bd-9405-0fcd66be5606)
+
+## Program Execution
+### Create Docker Image with DockerFile
+
+```sh
+docker build -t update-gym-services .
+```
+![Imagen de WhatsApp 2024-07-07 a las 22 58 43_9408fddc](https://github.com/BrayanBJ27/gymBackendUpdMicroservice/assets/87538474/71a97cfc-4fa1-4014-9b37-c555e2d20808)
+
+## DockerHub
+### DockerHub Repository
+
+[brayanbj27/bd-update-gym-services](https://hub.docker.com/r/brayanbj27/bd-update-gym-services)
+
+Docker Pull Command
+```sh
+docker pull brayanbj27/bd-update-gym-services
 ```
