@@ -28,7 +28,7 @@ db.connect((err) => {
 app.put('/reservations', (req, res) => {
     const { id } = req.params;
     const { machineName, userName, startTime, endTime } = req.body;
-    const updateQuery = 'UPDATE machine_reservations SET machine_name = ?, user_name = ?, start_time = ?, end_time = ? WHERE id = ?';
+    const query = 'UPDATE machine_reservations SET machine_name = ?, user_name = ?, start_time = ?, end_time = ? WHERE id = ?';
     db.query(query, [machineName, userName, startTime, endTime, id], (err, result) => {
         if (err) {
             console.error('Error updating reservation:', err);
